@@ -61,7 +61,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <AddItemForm />
+      <AddItemForm addItem={addItem} />
       <main>
 
         {/* <p>Under Construction...</p> */}
@@ -73,17 +73,7 @@ function App() {
   ); // End return
   //#endregion ⬆⬆ All rendering above. 
 
-    //#region ⬇⬇ All rendering below:
-    return (
-        <div className="App">
-            <Header />
-            <main>
-                <AddItemForm addItem={addItem} />
-                <p>Under Construction...</p>
-            </main>
-        </div>
-    ); // End return
-    //#endregion ⬆⬆ All rendering above. 
+    
 } // End App
 
 
