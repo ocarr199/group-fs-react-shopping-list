@@ -8,6 +8,20 @@ import axios from 'axios';
 
 
 function App() {
+
+const addItem = (newItem) => {
+    console.log(newItem);
+    // AXIOS POST
+    axios.post('/items',  newItem)
+    .then(response => {
+        console.log(`POSTED ${newItem}`);
+        // call getter function
+    }).catch(err => {
+        console.log('failed to post', err);
+    })
+
+}
+
     //#region ⬇⬇ All state variables & app load below:
     // ⬇ State variables:
     const [item, setItem] = useState([]);
@@ -45,6 +59,7 @@ function App() {
         <div className="App">
             <Header />
             <main>
+                
                 <p>Under Construction...</p>
             </main>
         </div>

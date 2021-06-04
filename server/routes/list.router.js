@@ -24,4 +24,20 @@ router.get('/', (req, res) => {
 
 // DELETE
 
+
+
+
+router.post('./', (req,res) => {
+    const newItem = req.body;
+    const queryText = `INSERT INTO "list" ("name", "quantity", "unit", "isPurchased" 
+                         VALUES($1, $2, $3, $4) `
+    pool.query(queryText, [newItem.name, newItem.quantity, newItem.unit, newItem.isPuchased])
+    .then(result => {
+
+        res.sendStatus(201)
+    }).catch(err => {
+        console.log(`Error making post query`, err)
+        res.sendStatus(500)
+    })
+})
 module.exports = router;
