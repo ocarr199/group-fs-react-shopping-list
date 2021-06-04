@@ -9,23 +9,28 @@ Header [x]
 
 AddItemForm[]
     Item, quantity, unit inputs with labels[]
-    save button[]
+    submit button[]
+      Need functionality
 
 ShoppingListDisplay[]
-    List[]
+    List[x]
         -looping through(.map)
     Reset Button(clears purchase status)
+      Need functionality
     clear button (clears Table)
+      Need functionality
 
-    Item[]
+    Item[x]
         --each entry
-    Item Name[]
-    Item quantity[]
-    Item unit[]
+    Item Name[x]
+    Item quantity[x]
+    Item unit[x]
     Buy button (mark as purchased)[]
         -once purchased hide button and move item to end of list
+        Need functionality
     remove button[]
        - deletes item
+       Need functionality
 
 
 *DATABASE*

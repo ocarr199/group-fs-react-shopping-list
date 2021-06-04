@@ -6,14 +6,10 @@ import Header from '../Header/Header.jsx'
 import axios from 'axios';
 import AddItemForm from '../AddItemForm/AddItemForm';
 import ItemList from '../ItemList/ItemList';
-
 //#endregion ⬆⬆ All document setup above. 
 
 
 function App() {
-
-
-
   //#region ⬇⬇ All state variables & app load below:
   // ⬇ State variables:
   const [itemList, setItemList] = useState([]);
@@ -53,7 +49,6 @@ function App() {
         console.log('failed to post', err);
       }); // End catch
   }; // End addItem
-
   //#endregion ⬆⬆ All CRUD routes above. 
 
 
@@ -63,17 +58,11 @@ function App() {
       <Header />
       <AddItemForm addItem={addItem} />
       <main>
-
-        {/* <p>Under Construction...</p> */}
         <ItemList itemList={itemList} />
-
-
       </main>
     </div>
   ); // End return
   //#endregion ⬆⬆ All rendering above. 
-
-    
 } // End App
 
 
