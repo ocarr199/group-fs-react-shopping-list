@@ -42,8 +42,9 @@ function App() {
     // AXIOS POST
     axios.post('/list', newItem)
       .then(response => {
-        console.log(`POSTED ${newItem}`);
+        console.log(`POSTED: `, newItem);
         // call getter function
+        getItems();
       }) // End .then
       .catch(err => {
         console.log('failed to post', err);
