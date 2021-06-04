@@ -2,6 +2,9 @@ import Item from "../Item/Item";
 import './ItemList.css';
 
 function ItemList({itemList}) {
+
+  
+
   return (
     <section class="itemList">
       <h3>Shopping List</h3>
