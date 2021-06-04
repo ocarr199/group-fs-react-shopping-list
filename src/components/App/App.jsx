@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header.jsx'
 import axios from 'axios';
 import AddItemForm from '../AddItemForm/AddItemForm';
+import ItemList from '../ItemList/ItemList';
 //#endregion ⬆⬆ All document setup above. 
 
 
@@ -14,7 +15,7 @@ function App() {
 
   //#region ⬇⬇ All state variables & app load below:
   // ⬇ State variables:
-  const [item, setItem] = useState([]);
+  const [itemList, setItemList] = useState([]);
   // ⬇ On load, get items:
   useEffect(() => {
     getItems();
@@ -30,7 +31,7 @@ function App() {
     axios.get('/list')
       .then(response => {
         console.log('logging response data in get', response.data);
-        setItem(response.data);
+        setItemList(response.data);
       }) // End .then
       .catch(error => {
         alert('error getting items');
@@ -62,7 +63,9 @@ function App() {
       <AddItemForm />
       <main>
 
-        <p>Under Construction...</p>
+        {/* <p>Under Construction...</p> */}
+        <ItemList itemList={itemList} />
+
       </main>
     </div>
   ); // End return
