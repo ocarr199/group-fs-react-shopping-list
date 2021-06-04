@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 function AddItemForm ({addItem}) {
 
+
    const [newItem, setNewItem] = useState('');
    // function to handle submit
    const handleSubmit = (event) => {
