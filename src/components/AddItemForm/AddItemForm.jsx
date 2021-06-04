@@ -1,23 +1,41 @@
 import React, { useState } from 'react';
 import './AddItemForm.css';
 
-function AddItemForm({ addItem }) {
-  const [newItem, setNewItem] = useState('');
-  // function to handle submit
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    AddItem(newItem);
-  }
-  return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="">Item:</label> <input class="itemInput" type="text" /><br />
-        <label htmlFor="">Quantity:</label> <input type="text" />
-        <label htmlFor="">Unit:</label> <input type="text" /><br />
-        <input class="submitInput" type="submit" value="Save" />
-      </form>
-    </>
-  );
+
+
+function AddItemForm ({addItem}) {
+
+
+   const [newItem, setNewItem] = useState('');
+   // function to handle submit
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      addItem(newItem);
+   }
+ return(
+<form onSubmit={handleSubmit}>
+   <label htmlFor="">Item</label> 
+      <input onChange={(event) => setNewItem({name: event.target.value})} 
+         value={newItem.name} 
+         placeholder="Item"
+         type="text"
+      />
+   <label htmlFor="">Quantity</label> 
+   <input onChange={(event) => setNewItem({quantity: event.target.value})} 
+         value={newItem.quantity} 
+         placeholder="Quantity"
+         type="text"
+      />
+  
+   <label htmlFor="">Unit</label> 
+   <input onChange={(event) => setNewItem({unit: event.target.value})} 
+         value={newItem.unit} 
+         placeholder="Unit"
+         type="text"
+      />
+   <input type="submit" value="Save" />
+</form>
+ );   
 };
 
 export default AddItemForm;

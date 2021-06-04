@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <AddItemForm />
+      <AddItemForm addItem={addItem} />
       <main>
         <ItemList itemList={itemList} />
       </main>
