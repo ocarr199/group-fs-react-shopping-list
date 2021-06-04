@@ -72,18 +72,6 @@ function App() {
     </div>
   ); // End return
   //#endregion ⬆⬆ All rendering above. 
-
-    //#region ⬇⬇ All rendering below:
-    return (
-        <div className="App">
-            <Header />
-            <main>
-                <AddItemForm addItem={addItem} />
-                <p>Under Construction...</p>
-            </main>
-        </div>
-    ); // End return
-    //#endregion ⬆⬆ All rendering above. 
 } // End App
 
 
