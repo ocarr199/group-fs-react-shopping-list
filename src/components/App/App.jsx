@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header.jsx'
 import axios from 'axios';
+import AddItemForm from '../AddItemForm/AddItemForm'
 //#endregion ⬆⬆ All document setup above. 
 
 
@@ -59,7 +60,7 @@ const addItem = (newItem) => {
         <div className="App">
             <Header />
             <main>
-                
+                <AddItemForm addItem={addItem} />
                 <p>Under Construction...</p>
             </main>
         </div>

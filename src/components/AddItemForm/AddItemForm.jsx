@@ -1,13 +1,21 @@
+import React, {useState} from 'react';
 
 
+function AddItemForm ({addItem}) {
 
-function AddItemForm () {
+   const [newItem, setNewItem] = useState('');
+   // function to handle submit
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      AddItem(newItem);
+   }
  return(
-<div>
+<form onSubmit={handleSubmit}>
    <label htmlFor="">Item</label> <input type="text" />
+   <label htmlFor="">Quantity</label> <input type="text" />
    <label htmlFor="">Unit</label> <input type="text" />
-   <label htmlFor="">Item</label> <input type="text" />
-</div>
+   <input type="submit" value="Save" />
+</form>
  );   
 };
 
